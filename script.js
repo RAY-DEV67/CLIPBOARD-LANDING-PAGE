@@ -26,21 +26,21 @@ let options = {
   threshold: 1,
 };
 
-const imgobserver = new IntersectionObserver(imageObserver, options);
+// const imgobserver = new IntersectionObserver(imageObserver, options);
 
-function imageObserver(entries, observer) {
-  entries.forEach((entry) => {
-    console.log(entry);
-    if (entry.isIntersecting) {
-      const img = entry.target;
-      const img_src = img.dataset.src;
-      img.src = img_src;
-      imgobserver.unobserve(img)
-    }
-  });
-}
+// function imageObserver(entries, observer) {
+//   entries.forEach((entry) => {
+//     console.log(entry);
+//     if (entry.isIntersecting) {
+//       const img = entry.target;
+//       const img_src = img.dataset.src;
+//       img.src = img_src;
+//       imgobserver.unobserve(img)
+//     }
+//   });
+// }
 
-image.forEach((img) => {
-  imgobserver.observe(img);
-  console.log(img.dataset.src);
-});
+// image.forEach((img) => {
+//   imgobserver.observe(img);
+//   console.log(img.dataset.src);
+// });
